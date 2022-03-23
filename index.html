@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio bootstrap 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .verde{
+            background: #648250;
+        }
+        #arrow,#mano{
+            transition: 0.4s ease-in-out;
+        }
+        #arrow img{
+            width: 40px;
+            height: 40px;
+            transform: rotate(-90deg) scale(.5);
+        }
+        #arrow:hover, #mano:hover{
+            transform: translateY(-10px);
+        }
+        body{
+            font-family: calibry;
+        }
+        nav{
+            font-family: roboto;
+        }
+        footer{
+            font-family: roboto;
+        }
+    </style>
+</head>
+<body>
+    <div id="arriba"></div>
+    <div  style="height: 10vh; width: 100%;"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top verde" style="height: 10vh;">
+      <a class="navbar-brand ml-md-4" href="#">
+        <img src="img/landscape.png" alt="Logo" style="filter: invert(1);">
+    </a>
+    <hr class="border d-none d-sm-block d-lg-none w-50">
+    <button class="navbar-toggler mr-md-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse mr-md-4 verde" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active ml-5">
+            <a class="nav-link" href="#">INICIO</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Portafolio/Galeria.html">GALERÍA</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Portafolio/Castillos.html">CASTILLOS</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Portafolio/Reservas.html">RESERVAS</a>
+        </li>
+    </ul>
+</div>
+</nav>
+<div class="d-flex justify-content-center align-items-center " style="height:90vh; background-image: url(img/fondo1.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <div>
+        <h1 class="text-center text-white d-none d-sm-block px-4 py-3" style="font-size: 8vw;  background-color: rgba(0, 0, 0, .6);">Escocia</h1>
+        <h1 class="text-white d-sm-none  px-4 py-3" style="font-size: 15vw; background-color: rgba(0, 0, 0, .6);">Escocia</h1>
+    </div>
+</div>
+<div class="mt-5 d-flex justify-content-center">
+    <h4 class="mt-5 text-center display-5 mx-3">Escocia no podría entenderse sin sus Highlands, sus leyendas, sus islas del norte, sus pequeños y remotos pueblos rurales o sus paisajes sobrecogedores.</h4>
+</div>
+<div class="mt-5 d-flex justify-content-center">
+    <p class="  text-center display-5 mx-4">Cuando pensamos en Escocia, lo primero que nos viene a la cabeza son castillos, gaitas y escoceses con faldas a cuadros. Afortunadamente, la tierra de Willian Wallace y Rob Roy va más allá de los estereotipos. Este país es un paraíso donde el verde no encuentra límites tonales y donde la esencia más auténtica se sirve en pequeñas dosis.</p>
+</div>
+<section class="row mx-3 my-5">  
+    <article class="mt-5">
+        <div class="col-lg-6 my-sm-0 float-sm-right border-bottom border-danger pb-3">
+            <img src="img/lago_ness.jpg" class="w-100" alt="lago ness" style="position: relative;">
+            <h4 class="text-center mt-2">Lago Ness</h4>
+        </div>
+        <div class="mb-4 col-lg-6 float-sm-left  mt-5 mt-lg-0 mt-xl-3 border-top border-danger">
+            <h5 style="font-weight: 400;" class=" display-5 text-justify mt-0  mt-lg-4 mt-xl-5">Las historias de un enorme monstruo que vive en las profundidades de las oscuras aguas del Lago Ness han sido dominio público desde que apareció la primera fotografía en 1933. Con más de 1000 testimonios de testigos oculares y montones de datos a los que no se ha conseguido dar explicación, la existencia de Nessie sigue teniendo perplejos a los científicos.</h5>
+            <div class="d-flex justify-content-center mt-5 mt-lg-4 mt-xl-4">
+                <button class="btn px-3 py-2 ">Ver mas</button>
+            </div>
+        </div>
+    </article> 
+</section>
+<section class="row mx-3 my-5">  
+    <article class="mt-5">
+        <div class="col-lg-6 my-sm-0 float-sm-left">
+            <img src="img/neist-point.jpg" alt="neist point" class="w-100">
+            <h4 class="text-center mt-2">Neist Point</h4>
+        </div>
+        <div class="mb-4 col-lg-6 float-sm-right  mt-5 mt-lg-0 mt-xl-3">
+            <h5 style="font-weight: 400;" class=" display-5 text-justify mt-0  mt-xl-4">Neist Point es nuestro lugar favorito de la fantástica Isla de Skye. Conocido como el fin del mundo escocés, es un lugar en el que circulas por carreteras de un carril esquivando ovejas y, muy de vez en cuando, algún coche. Una isla solitaria y difícil de olvidar. Al llegar a Neist Point puedes subir una pequeña colina y sentarte al borde de un acantilado, desde donde disfrutarás de unas impresionantes vistas a la lengua de mar que la separa de las islas Hébridas Exteriores.</h5>
+            <div class="d-flex justify-content-center mt-5 mt-lg-4 mt-xl-4">
+                <button class="btn px-3 py-2 ">Ver mas</button>
+            </div>
+        </div>
+    </article> 
+</section>
+<section class="row mx-3 my-5">  
+    <article class="mt-5">
+        <div class="col-lg-6 my-sm-0 float-sm-right">
+            <img src="img/Glencoe.png" alt="Glencoe" class="w-100">
+            <h4 class="text-center mt-2">Glencoe</h4>
+        </div>
+        <div class="mb-4 col-lg-6 float-sm-left  mt-5 mt-lg-0 mt-xl-3">
+            <h5 style="font-weight: 400;" class=" display-5 text-justify mt-0  mt-xl-4">Situado en el impresionante Geoparque Lochaber, en las Highlands, el profundo valle y las elevadas montañas de Glen Coe fueron formados hace siglos por glaciares de hielo y explosiones volcánicas.El pueblo de Glencoe goza de una pintoresca situación entre las orillas de Loch Leven y la entrada al famoso valle, lo que lo convierte en la base perfecta para explorar el área de Lochaber, conocida como la «capital de actividades al aire libre del Reino Unido".</h5>
+            <div class="d-flex justify-content-center mt-5 mt-lg-4 mt-xl-4">
+                <button class="btn px-3 py-2 ">Ver mas</button>
+            </div>
+        </div>
+    </article> 
+</section>
+<footer>
+    <div class="d-flex justify-content-center mb-3">
+        <hr class="w-100 border border-5 mx-5">     
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4  text-center">
+          <h5>Redes Sociales</h5>
+          <div class="mt-4">
+              <img src="img/instagram.png" alt="instagram" class="mr-3">
+              <img src="img/facebook.png" alt="facebook" class="mr-3">
+              <img src="img/youtube.png" alt="youtube" class="mr-3">
+              <img src="img/whatsapp.png" alt="whatsapp">
+          </div>
+      </div>
+      <div class="col-md-4 text-center mt-3 mt-md-0 ">
+          <h5 class="mt-4 mt-md-0">Registrate</h5>
+          <p class="d-inline-block mx-3 mt-2 mt-md-3">Pinche aquí</p>
+          <a href="Portafolio/registro.html"><img src="img/mano.png" alt="mano" id="mano"></a>
+      </div>
+      <div class="col-md-4 text-center">
+          <h5 class="mt-4 mt-md-0">Info</h5>
+          <p class="m-0 mt-2">Tel: 123-456-789</p>
+          <p >Correo@gmail.com</p>
+      </div>
+  </div>
+</div>
+<div class="float-right mr-3 " id="arrow">
+    <a href="#arriba"><img src="img/arrow.png" alt="flecha"></a>
+</div>
+<p class="verde text-white text-center py-3 mb-0 mt-5 border">© 2021-2022 Todos los Derechos Reservados</p>
+</footer>
+</body>
+</html>

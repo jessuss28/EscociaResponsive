@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio bootstrap 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .verde{
+            background: #648250;
+            cursor: pointer;
+        }
+        .verde:hover{
+            background: #467832;
+        }
+        body{
+            font-family: calibry;
+        }
+</style>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center mx-4" style="height:88.3vh;">
+        <div class="row">
+            <div class=" w-50  text-center d-none d-md-block">
+                      <img src="../img/user.png" alt="user" class="mt-4">
+                <h1 class="mt-2">Información de contacto</h1>
+                <div class="my-4">
+                    <img src="../img/letter.png" alt="letter">
+                    <p>Correo@gmail.com</p>
+                </div>
+                <div class="my-4">
+                    <img src="../img/phone.png" alt="phone">
+                    <p>+34 123-456-789</p>
+                </div>
+            </div>
+            <form action="#" method="POST">
+                <h3 class="text-center mb-5">Registrate</h3>
+                <input type="text" name="nombre" placeholder="Nombre" class="col form-control" required>
+                <input type="text" name="apellido" placeholder="Apellidos" class="col form-control my-3" required>
+                <input type="text" name="email" placeholder="Email" class="col form-control my-3" required>
+                <input type="password" name="contrasena" placeholder="Contraseña" class="col form-control my-3" required>
+                <input type="checkbox">
+                <span>
+                    Estoy de acuerdo con los <a href="#">Términos y condiciones.</a>
+                </span>
+                <input type="submit" onclick="hizoClick()" name="enviar" value="Enviar" class="verde border-0 py-2 text-white col form-control my-3">
+                <div class="text-center">
+                    <a href="#" class="text-dark">¿Ya tienes una cuenta?</a>
+                </div>
+                <div class="text-center mt-3">
+                     <a href="../index.html" class="text-dark">Volver</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+function hizoClick() {
+  alert("Usuario registrado correctamente");
+}
+</script>
+<p class="verde text-white text-center py-3 mb-0 mt-5 border">© 2021-2022 Todos los Derechos Reservados</p>
+</body>
+</html>

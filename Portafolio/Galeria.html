@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio bootstrap 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .verde{
+            background: #648250;
+        }
+        #arrow,#mano{
+            transition: 0.4s ease-in-out;
+        }
+        #arrow img{
+            width: 40px;
+            height: 40px;
+            transform: rotate(-90deg) scale(.5);
+        }
+        #arrow:hover, #mano:hover{
+            transform: translateY(-10px);
+        }
+        .fondo:before {
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.4);
+        }
+        body{
+            font-family: calibry;
+        }
+        nav{
+            font-family: roboto;
+        }
+        footer{
+            font-family: roboto;
+        }
+    </style>
+</head>
+<body>
+    <div id="arriba"></div>
+    <div  style="height: 10vh; width: 100%;"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top verde" style="height: 10vh;">
+      <a class="navbar-brand ml-md-4" href="#">
+        <img src="../img/landscape.png" alt="Logo" style="filter: invert(1);">
+    </a>
+    <hr class="border d-none d-sm-block d-lg-none w-50">
+    <button class="navbar-toggler mr-md-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse mr-md-4 verde" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ml-5 ">
+            <a class="nav-link" href="../index.html">INICIO</a>
+        </li>
+        <li class="nav-item active  ml-5 ml-lg-2">
+            <a class="nav-link " href="#">GALERÍA</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Castillos.html">CASTILLOS</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Reservas.html">RESERVAS</a>
+        </li>
+    </ul>
+</div>
+</nav>
+
+
+
+
+
+
+<div class="container mb-5">
+    <div class="row mt-3">
+        <div class="col">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" >
+                    <div class="carousel-item active fondo">
+                        <img class="d-block w-100" src="../img/montanas.jpg" alt="First slide">
+                        <div class="carousel-caption mb-xl-5">
+                            <h3 style="font-size: 3vw;" class="d-none d-md-block ">Montañas Quiraing</h3>
+                            <p class="mb-lg-5 d-none d-md-block" style="font-size: 1.8vw;">el paraíso de los senderistas</p>
+                            <h3 style="font-size: 6vw;" class="d-sm-none">Montañas Quiraing</h3>
+                            <p class="mb-lg-5 d-sm-none" style="font-size: 3vw;">el paraíso de los senderistas</p>
+                            <h3 style="font-size: 5vw;" class="d-none d-sm-block d-md-none">Montañas Quiraing</h3>
+                            <p class="mb-lg-5 d-none d-sm-block d-md-none" style="font-size: 3vw;">el paraíso de los senderistas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item fondo">
+                        <img class="d-block w-100" src="../img/tren1.jpg" alt="First slide">
+                        <div class="carousel-caption mb-xl-5">
+                            <h3 style="font-size: 3vw;" class="d-none d-md-block">The Jacobite Steam</h3>
+                            <p class="mb-lg-5 d-none d-md-block" style="font-size: 1.8vw;">un tren de película</p>
+                            <h3 style="font-size: 6vw;" class="d-sm-none">The Jacobite Steam</h3>
+                        <p class="mb-lg-5 d-sm-none" style="font-size: 3vw;">un tren de película</p>
+                        <h3 style="font-size: 5vw;" class="d-none d-sm-block d-md-none">The Jacobite Steam</h3>
+                        <p class="mb-lg-5 d-none d-sm-block d-md-none" style="font-size: 3vw;">un tren de película</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item fondo">
+                        <img class="d-block w-100" src="../img/neist_point.jpg" alt="First slide">
+                        <div class="carousel-caption mb-xl-5">
+                            <h3 style="font-size: 3vw;" class="d-none d-md-block">Neist Point</h3>
+                            <p class="mb-lg-5 d-none d-md-block" style="font-size: 1.8vw;">tierra de paisajes impresionantes</p>
+                            <h3 style="font-size: 6vw;" class="d-sm-none">Neist Point</h3>
+                            <p class="mb-lg-5 d-sm-none" style="font-size: 3vw;">tierra de paisajes impresionantes</p>
+                            <h3 style="font-size: 5vw;" class="d-none d-sm-block d-md-none">Neist Point</h3>
+                            <p class="mb-lg-5 d-none d-sm-block d-md-none" style="font-size: 3vw;">tierra de paisajes impresionantes</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" style="margin-top: 15%;">
+    <div class="row text-center">
+        <hr class="w-25 border border-dark">  
+         <h3>Norte</h3>
+         <hr class="w-25 border border-dark">  
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row mx-2">
+        <img src="../img/anillo_de_brodgar.jpg" alt="Anillo de Broadgar" class="col-lg-4 ">
+        <h5 class="d-lg-none w-100 text-center mt-3">Anillo de Broadgar</h5>
+        <img src="../img/bahia_de_marwick.jpg" alt="Bahía de Marwick" class="col-lg-4 mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Bahía de Marwick</h5>
+        <img src="../img/catedral_de_san_magnus.jpg" alt="Catedral de San Magnus" class="col-lg-4 float-right mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Catedral de San Magnus</h5>
+
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Anillo de Broadgar</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Bahía de Marwick</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Catedral de San Magnus</h5>
+    </div>
+    
+   <div class="row mx-2 mt-5">
+        <img src="../img/old_man_of_hoy.jpg" alt="Old man of Hoy" class="col-lg-4">
+        <h5 class="d-lg-none w-100 text-center mt-3">Old Man of Hoy</h5>
+        <img src="../img/scapa_flow.jpg" alt="Scapa Flow" class="col-lg-4 mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Scapa Flow</h5>
+        <img src="../img/skara_brae.jpg" alt="Shara Brae" class="col-lg-4 float-right mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Skara Brae</h5>
+
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Old Man of Hoy</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Scapa Flow</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Skara Brae</h5>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container-fluid" style="margin-top: 15%;">
+    <div class="row text-center">
+        <hr class="w-25 border border-dark">  
+         <h3>Sur</h3>
+         <hr class="w-25 border border-dark">  
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row mx-2">
+        <img src="../img/St-Abbs.jpg" alt="St Abbs" class="col-lg-4">
+        <h5 class="d-lg-none w-100 text-center mt-3">St Abbs</h5>
+        <img src="../img/Abadía-de-Jedburgh.jpg" alt="Abadía de Jedburgh" class="col-lg-4 mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Abadía de Jedburgh</h5>
+        <img src="../img/Centro_de_Jedburgh.jpg" alt="Centro de Jedburgh" class="col-lg-4 float-right mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Centro de Jedburgh</h5>
+
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">St Abbs</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Abadía de Jedburgh</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Centro de Jedburgh</h5>
+    </div>
+    
+   <div class="row mx-2 mt-5">
+        <img src="../img/Abadía-de-Melrose.jpg" alt="Abadía de Melrose" class="col-lg-4">
+        <h5 class="d-lg-none w-100 text-center mt-3">Abadía de Melrose</h5>
+        <img src="../img/Palacio_de_Holyroodhouse.jpg" alt="Palacio de Holyroodhouse" class="col-lg-4 mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Palacio de Holyroodhouse</h5>
+        <img src="../img/Torre-de-Smailholm.jpg" alt="Torre de Smailholm" class="col-lg-4 float-right mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Torre de Smailholm</h5>
+
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Abadía de Melrose</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Palacio de Holyroodhouse</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Torre de Smailholm</h5>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" style="margin-top: 15%;">
+    <div class="row text-center">
+        <hr class="w-25 border border-dark">  
+         <h3>Edimburgo</h3>
+         <hr class="w-25 border border-dark">  
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row mx-2">
+        <img src="../img/Cementerio_Greyfriar.jpg" alt="Cementerio Greyfriar" class="col-lg-4">
+        <h5 class="d-lg-none w-100 text-center mt-3">Cementerio Greyfriar</h5>
+        <img src="../img/Royal_Mile.jpg" alt="Royal Mile" class="col-lg-4 mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Royal Mile</h5>
+        <img src="../img/Catedral_de_edimburgo.jpg" alt="Catedral de Edimburgo" class="col-lg-4 float-right mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Catedral de Edimburgo</h5>
+
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Cementerio Greyfriar</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Royal Mile</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Catedral de Edimburgo</h5>
+    </div>
+    
+   <div class="row mx-2 mt-5">
+        <img src="../img/Victoria_St.jpg" alt="Victoria St" class="col-lg-4">
+        <h5 class="d-lg-none w-100 text-center mt-3">Victoria St</h5>
+        <img src="../img/calton_hill.jpg" alt="Calton Hill" class="col-lg-4 mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Calton Hill</h5>
+        <img src="../img/dean_village.jpg" alt="Dean Village" class="col-lg-4 float-right mt-5 mt-lg-0">
+        <h5 class="d-lg-none w-100 text-center mt-3">Dean Village</h5>
+
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Victoria St</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Calton Hill</h5>
+        <h5 class="d-none d-lg-block col-lg-4 text-center mt-3">Dean Village</h5>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d-flex justify-content-center mt-5 mb-3">
+    <hr class="w-100 border border-5 mx-5">     
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4  text-center">
+      <h5>Redes Sociales</h5>
+      <div class="mt-4">
+          <img src="../img/instagram.png" alt="instagram" class="mr-3">
+          <img src="../img/facebook.png" alt="facebook" class="mr-3">
+          <img src="../img/youtube.png" alt="youtube" class="mr-3">
+          <img src="../img/whatsapp.png" alt="whatsapp">
+      </div>
+  </div>
+  <div class="col-md-4 text-center mt-3 mt-md-0 ">
+      <h5 class="mt-4 mt-md-0">Registrate</h5>
+      <p class="d-inline-block mx-3 mt-2 mt-md-3">Pinche aquí</p>
+      <a href="registro.html"><img src="../img/mano.png" alt="mano" id="mano"></a>
+  </div>
+  <div class="col-md-4 text-center">
+      <h5 class="mt-4 mt-md-0">Info</h5>
+      <p class="m-0 mt-2">Tel: 123-456-789</p>
+      <p >Correo@gmail.com</p>
+  </div>
+</div>
+</div>
+<div class="float-right mr-3 transition" id="arrow">
+    <a href="#arriba"><img src="../img/arrow.png" alt="flecha"></a>
+</div>
+<p class="verde text-white text-center py-3 mb-0 mt-5 border">© 2021-2022 Todos los Derechos Reservados</p>
+</body>
+</html>

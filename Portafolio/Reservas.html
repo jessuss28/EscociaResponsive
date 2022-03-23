@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio bootstrap 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .verde{
+            background: #648250;
+        }
+        #arrow,#mano{
+            transition: 0.4s ease-in-out;
+        }
+        #arrow img{
+            width: 40px;
+            height: 40px;
+            transform: rotate(-90deg) scale(.5);
+        }
+        #arrow:hover, #mano:hover{
+            transform: translateY(-10px);
+        }
+        .fondo:before {
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.6);
+        }
+        body{
+            font-family: calibry;
+        }
+        nav{
+            font-family: roboto;
+        }
+        footer{
+            font-family: roboto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="arriba"></div>
+    <div  style="height: 9vh; width: 100%;"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top verde" style="height: 10vh;">
+      <a class="navbar-brand ml-md-4" href="#">
+        <img src="../img/landscape.png" alt="Logo" style="filter: invert(1);">
+    </a>
+    <hr class="border d-none d-sm-block d-lg-none w-50">
+    <button class="navbar-toggler mr-md-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse mr-md-4 verde" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ml-5 ">
+            <a class="nav-link" href="../index.html">INICIO</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Galeria.html">GALERÍA</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Castillos.html">CASTILLOS</a>
+        </li>
+        <li class="nav-item active ml-5 ml-lg-2">
+            <a class="nav-link " href="#">RESERVAS</a>
+        </li>
+    </ul>
+</div>
+</nav>
+
+
+
+
+<div class="d-flex justify-content-center align-items-center " style="height:90vh; background-image: url(../img/hotel.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <form name="formulario" action="#" class="container d-none d-md-block">
+    <div class="row  py-4">
+        <div class=" verde col-md-3 text-center pt-2">
+            <div class="d-none d-md-inline-block"><img src="../img/search.png" alt="search" style="filter: invert(1); transform: scale(.7);"></div>
+            <select name=" " class="verde border-0 text-white">
+                <option>Escocia</option>
+                <option>Edimburgo</option>
+                <option>Glencoe</option>
+                <option>Dundee</option>
+                <option>Glasgow</option>
+                <option>Pitlochry</option>
+                <option>Inverness</option>
+            </select>   
+        </div>
+        <div class="col-md-4 text-center pt-2 border-left verde d-none d-md-block">
+            <input type="date" class=" border-0" style="filter: invert(1); background: transparent; font-weight: 300;">
+        </div>
+        <div class="verde col-md-4 text-center pt-2 border-left">
+            <input type="number" name="number_control" min="0" max="10" value="0" class="verde border-0 text-white">
+            <p class="text-white d-none d-md-inline-block">Personas</p>
+        </div>
+        <div class="verde border-left col-md-1 pt-2 text-right">
+            <input type="image" src="../img/search.png" alt="search" style="filter: invert(1);">
+        </div>
+    </div>
+</form>
+<form class="text-center w-75 p-4 rounded d-md-none" style="box-shadow: 0 15px 25px rgba(0, 0, 0,.7);">
+        <p>Elija destino</p>
+        <select class="text-center form-control" style="background: transparent;">
+           <option>Escocia</option>
+                <option>Edimburgo</option>
+                <option>Glencoe</option>
+                <option>Dundee</option>
+                <option>Glasgow</option>
+                <option>Pitlochry</option>
+                <option>Inverness</option> 
+        </select>
+        <p class="mt-4">Elija una fecha:</p>
+        <input type="text" placeholder="dd/mm/aaaa" name="fecha" class="border form-control text-center" style="background: transparent;">
+        <p class="mt-4">Número de Personas:</p>
+        <input type="number" name="personas" placeholder="0" class= "form-control text-center" style="background: transparent;">
+        <input type="submit" name="enviar" value="Buscar" class="form-control text-center mt-4 verde text-white border-0">
+    </form>
+    </div>
+
+
+
+<h4 class=" text-center mb-4" style="margin-top: 15vh;">Te Recomendamos</h4>
+<div class="container">
+    <video src="../img/Edimburgo.mp4" controls="controls" poster="../img/edimburgo_sc.png" class="img-fluid">
+        Su navegador no soporta la etiqueta video.
+    </video>
+    <p class="mt-3 text-center">Edimburgo es famosa por su Festival Internacional, el festival de actuaciones en vivo más grande del mundo, y otros festivales desarrollados en verano de forma más o menos simultánea, la mayoría de los cuales se agrupan bajo la denominación Festival de Edimburgo. Durante el festival la población de la ciudad se duplica. Edimburgo es la segunda ciudad más visitada del Reino Unido, después de Londres, con aproximadamente 13 millones de turistas al año.</p>
+</div>
+<div class="container mt-5">
+    <video src="../img/Glasgow.mp4" controls="controls" poster="../img/glasgow_sc.png" class="img-fluid">
+        Su navegador no soporta la etiqueta video.
+    </video>
+    <p class="mt-3 text-center">Antiguamente, fue una royal burgh (ciudad real), y era conocida como la «segunda ciudad del imperio británico» en la época victoriana. Se erigió como un gran puerto de comercio de trasatlánticos durante la Revolución industrial. El Clyde fue uno de los más preeminentes centros mundiales de astilleros, construyéndose en él muchos de los revolucionarios y famosos buques de la línea Cunard como el RMS Lusitania, RMS Aquitania, RMS Queen Mary, RMS Queen Elizabeth y el RMS Queen Elizabeth 2; así como el yate real Britannia.</p>
+</div>
+<div class="container mt-5">
+    <video src="../img/Inverness.mp4" controls="controls" poster="../img/Inverness_sc.png" class="img-fluid">
+        Su navegador no soporta la etiqueta video.
+    </video>
+    <p class="mt-3 text-center">La ciudad de Inverness se sitúa en la desembocadura del río Ness en el fiordo de Moray (en inglés: Moray Firth) y sirve de punto de conexión entre diversos medios de transporte. Los primeros establecimientos humanos en la zona datan del siglo VI a. C., y la primera carta puebla, del siglo XIII. Cerca de ella tuvo lugar la batalla de Culloden, en el siglo XVIII.Además, es considerada y publicitada como la capital de la región de las Tierras Altas. La ciudad de Inverness es inusual porque, aunque existe una patente real del año 2001, la ciudad no tiene límites establecidos.</p>
+</div>
+
+
+<h4 class=" text-center mb-4" style="margin-top: 15vh;">¿Quieres reservar una habitación?</h4>
+    <table class="table-hover container text-center">
+            <thead>
+                <tr>
+                    <th class="py-3  text-center">Habitación</th>
+                    <th class="py-3  text-center">Precio</th>
+                    <th class="py-3  text-center">Descuento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-2  border-right border-left text-center">Individual</td>
+                    <td class=" border-right text-center">50€</td>
+                    <td class=" border-right text-center">2%</td>
+                </tr>
+                <tr>
+                    <td class="py-2  border-right border-left text-center" >Doble</td>
+                    <td class=" border-right text-center">70€</td>
+                    <td class=" border-right text-center">5%</td>
+                </tr>
+                <tr>
+                    <td class="py-2  border-right border-left text-center">Triple</td>
+                    <td class=" border-right text-center">120€</td>
+                    <td class=" border-right text-center">7%</td>
+                </tr>
+                <tr>
+                    <td class="py-2  border-right border-left text-center">Quad</td>
+                    <td class=" border-right text-center">150€</td>
+                    <td class=" border-right text-center">10%</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="d-flex justify-content-center mt-5 mb-3">
+    <hr class="w-100 border border-5 mx-5">     
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4  text-center">
+      <h5>Redes Sociales</h5>
+      <div class="mt-4">
+          <img src="../img/instagram.png" alt="instagram" class="mr-3">
+          <img src="../img/facebook.png" alt="facebook" class="mr-3">
+          <img src="../img/youtube.png" alt="youtube" class="mr-3">
+          <img src="../img/whatsapp.png" alt="whatsapp">
+      </div>
+  </div>
+  <div class="col-md-4 text-center mt-3 mt-md-0 ">
+      <h5 class="mt-4 mt-md-0">Registrate</h5>
+      <p class="d-inline-block mx-3 mt-2 mt-md-3">Pinche aquí</p>
+      <a href="registro.html"><img src="../img/mano.png" alt="mano" id="mano"></a>
+  </div>
+  <div class="col-md-4 text-center">
+      <h5 class="mt-4 mt-md-0">Info</h5>
+      <p class="m-0 mt-2">Tel: 123-456-789</p>
+      <p >Correo@gmail.com</p>
+  </div>
+</div>
+</div>
+<div class="float-right mr-3 transition" id="arrow">
+    <a href="#arriba"><img src="../img/arrow.png" alt="flecha"></a>
+</div>
+<p class="verde text-white text-center py-3 mb-0 mt-5 border">© 2021-2022 Todos los Derechos Reservados</p>
+</body>
+</html>

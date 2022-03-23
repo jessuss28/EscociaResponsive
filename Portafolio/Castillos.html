@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio bootstrap 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .verde{
+            background: #648250;
+        }
+        #arrow,#mano{
+            transition: 0.4s ease-in-out;
+        }
+        #arrow img{
+            width: 40px;
+            height: 40px;
+            transform: rotate(-90deg) scale(.5);
+        }
+        #arrow:hover, #mano:hover{
+            transform: translateY(-10px);
+        }
+        .fondo:before {
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.4);
+        }
+        body{
+            font-family: calibry;
+        }
+        nav{
+            font-family: roboto;
+        }
+        footer{
+            font-family: roboto;
+        }
+    </style>
+</head>
+<body>
+    <div id="arriba"></div>
+    <div  style="height: 12vh; width: 100%;"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top verde" style="height: 10vh;">
+      <a class="navbar-brand ml-md-4" href="#">
+        <img src="../img/landscape.png" alt="Logo" style="filter: invert(1);">
+    </a>
+    <hr class="border d-none d-sm-block d-lg-none w-50">
+    <button class="navbar-toggler mr-md-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse mr-md-4 verde" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ml-5 ">
+            <a class="nav-link" href="../index.html">INICIO</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Galeria.html">GALERÍA</a>
+        </li>
+        <li class="nav-item active ml-5 ml-lg-2">
+            <a class="nav-link " href="#">CASTILLOS</a>
+        </li>
+        <li class="nav-item  ml-5 ml-lg-2">
+            <a class="nav-link " href="Reservas.html">RESERVAS</a>
+        </li>
+    </ul>
+</div>
+</nav>
+
+
+
+
+
+
+
+
+<div class="d-flex justify-content-center align-items-center ">
+            <img class="w-75" src="../img/castillo.jpg" alt="First slide" style=" box-shadow: 0 15px 25px rgba(0, 0, 0,.7);">     
+</div>
+<h3 class="text-center" style="margin-top: 15%;">Descubre con nosostros</h3>
+<div class="container" style="margin-bottom: 10%;">
+<h5 class="text-center mt-5">
+    En Escocia, los castillos son un elemento tan fundamental del paisaje como los valles o los lochs.Alguna vez se contaron por miles, y, aunque hoy muchos forman parte del recuerdo, recorriendo el país estas construcciones se cruzarán a diario en tu camino, ya sea en forma de ruinas olvidadas o de fortaleza abierta al público.
+</h5>    
+</div>
+<div class="container">
+<h4 class="ml-2 mb-4">4 – Duart Castle (Isle of Mull)</h4> 
+<div class="row">
+    <img src="../img/Duart_Castle.jpg" alt="castillo" class="col-md-7">
+    <div class="col-md-5 d-flex justify-content-center align-items-center mt-4 mt-md-0 text-justify">
+        En lo alto del acantilado, vigilando el mar, esta fortaleza nos dará la bienvenida al arribar a la isla de Mull, una de esas joyas desconocidas de Escocia. Sus orígenes se remontan al siglo XIII, cuando lo construyó el clan MacLean, pero tras múltiples batallas el clan Campbell se apoderó de él y lo demolió, no siendo hasta 1912 que los MacLean recuperaron nuevamente la posesión de las tierras, y reconstruyeron el castillo Duart como mejor pudieron.
+    </div>
+</div>
+
+
+<h4 class="ml-2 mb-4" style="margin-top: 10%;">3 – Edzell Castle</h4> 
+<div class="row">
+    <img src="../img/Edzell_Castle.jpg" alt="Edzell Castle" class="col-md-7">
+    <div class="col-md-5 d-flex justify-content-center align-items-center mt-4 mt-md-0 text-justify">
+        ¡Aquí viven pavos reales! Podría contar que es del siglo XVI, que es de un color rosáceo, que su jardín amurallado es una fiel reconstrucción del que había en 1610 y tiene varios símbolos esotéricos, que en rara ocasión sus murallas vieron alguna batalla, y que más que un castillo era una casa de campo en medio de la campiña escocesa, pero lo más importante es que ¡aquí viven pavos reales!
+    </div>
+</div>
+
+
+<h4 class="ml-2 mb-4" style="margin-top: 10%;">2 – Urquhart Castle</h4> 
+<div class="row">
+    <img src="../img/Urquhart_Castle.jpg" alt="Urquhart Castle" class="col-md-7">
+    <div class="col-md-5 d-flex justify-content-center align-items-center mt-4 mt-md-0 text-justify">
+        En medio del célebre lago Ness (Loch Ness) nos encontramos con uno de los castillos más emblemáticos, más grandes y más visitados de Escocia, el castillo de Urquhart. Fundado en el siglo XIII, jugó un importante papel en la guerra de independencia escocesa (la de William Wallace), y aunque actualmente se encuentra en ruinas, se puede visitar muy cómodamente, además de contar con gran cantidad de información para el visitante.
+    </div>
+</div>
+
+
+<h4 class="ml-2 mb-4" style="margin-top: 10%;">1 – Eilean Donnan Castle</h4> 
+<div class="row">
+    <img src="../img/Eilean_Donnan_Castle.jpg" alt="Eilean Donnan" class="col-md-7">
+    <div class="col-md-5 d-flex justify-content-center align-items-center mt-4 mt-md-0 text-justify">
+        El castillo más famoso de Escocia y el líder indiscutible en cualquier top, pero no en éste. ¿Porqué? Pues simplemente porque es una burda reconstrucción de principios del siglo XX. Desde fuera es muy bonito, su emplazamiento en su propia isla es de película (unas cuantas fueron rodadas aquí, como Los Inmortales), pero al visitarlo por dentro parece que estamos en la casa de la abuelita, más que en un ancestral castillo escocés en el que se han librado cientos de batallas.
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d-flex justify-content-center mt-5 mb-3">
+    <hr class="w-100 border border-5 mx-5">     
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4  text-center">
+      <h5>Redes Sociales</h5>
+      <div class="mt-4">
+          <img src="../img/instagram.png" alt="instagram" class="mr-3">
+          <img src="../img/facebook.png" alt="facebook" class="mr-3">
+          <img src="../img/youtube.png" alt="youtube" class="mr-3">
+          <img src="../img/whatsapp.png" alt="whatsapp">
+      </div>
+  </div>
+  <div class="col-md-4 text-center mt-3 mt-md-0 ">
+      <h5 class="mt-4 mt-md-0">Registrate</h5>
+      <p class="d-inline-block mx-3 mt-2 mt-md-3">Pinche aquí</p>
+     <a href="registro.html"><img src="../img/mano.png" alt="mano" id="mano"></a>
+  </div>
+  <div class="col-md-4 text-center">
+      <h5 class="mt-4 mt-md-0">Info</h5>
+      <p class="m-0 mt-2">Tel: 123-456-789</p>
+      <p >Correo@gmail.com</p>
+  </div>
+</div>
+</div>
+<div class="float-right mr-3 transition" id="arrow">
+    <a href="#arriba"><img src="../img/arrow.png" alt="flecha"></a>
+</div>
+<p class="verde text-white text-center py-3 mb-0 mt-5 border">© 2021-2022 Todos los Derechos Reservados</p>
+</body>
+</html>
